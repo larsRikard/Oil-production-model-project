@@ -29,6 +29,7 @@ nosummary   %% uncomment if no summary page should be generated
 
 \usepackage{lipsum} % just for providing fill text used in this template
 \usepackage{array} % for adjusting tables
+\usepackage{fontspec}
 
 % --- general setup ---
 %% Please fill in the following parameters:
@@ -124,8 +125,27 @@ Porsgrunn, \today
 \label{ch:probs}
 This chapter includes discussions and answers of problems presented in the 2022 FM1015 project description.
 \section{Expression of density of liquid mixture}
-Expression of density of liquid mixture.
-Formula
+We have that
+\begin{eqnarray}
+ \displaystyle \dot{m}=\dot{m}_w+\dot{m}_o
+\end{eqnarray}
+By inserting \(\dot{m} = \rho \dot{V}\) we get:
+\begin{eqnarray}
+ \displaystyle \rho \dot{V} =\rho_w \dot{V}_w  + \rho_o \dot{V}_o \\
+  \displaystyle \rho = \frac{\rho_w \dot{V}_w } {\dot{V} } + \frac{\rho_o \dot{V}_o }{\dot{V} }
+\end{eqnarray}
+By applying the \textit{water cut} equation \(\dot{V}_w  = \chi_w \dot{V} \) to the volumetric flow equation assuming an \textit{ideal solution} \(\dot{V}  = \dot{V}_w  + \dot{V}_o \), we can see that:
+\begin{eqnarray}
+ \displaystyle \frac{\dot{V}_o}{\dot{V} } = 1- x_w
+\end{eqnarray}
+If we further apply the water cut equation and equation (1.4) to equation (1.3) we see that we finally get the wanted equation:
+\begin{eqnarray}
+ \displaystyle \rho =\chi_w \rho_w  + (1-\chi_w) \rho_o 
+\end{eqnarray}
+
+\section{EoS for the liquid mixture}
+
+
 
 % A dummy command that causes all bibliographyentries to be displayed
 % even though there were not cited in the document. Used for demonstration
