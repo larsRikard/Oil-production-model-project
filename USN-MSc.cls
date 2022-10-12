@@ -30,7 +30,7 @@
 % --- useful commands
 \newcommand{\mysubject}{%
   \if@project%
-  FM4017 Project \the\year%
+  Project FM1015 Modelling of Dynamic Systems \the\year%
   \else%
   FMH606 Master's Thesis \the\year%
   \fi%
